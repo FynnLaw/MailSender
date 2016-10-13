@@ -38,11 +38,14 @@ public class MailTool {
     Message msg = new MimeMessage(session);
     //设置邮件标题
     msg.setSubject("seenews 错误");
+    
     StringBuilder builder = new StringBuilder();
     builder.append("url = " + "http://blog.csdn.net/never_cxb/article/details/50524571");
     builder.append("\n页面爬虫错误");
+    
     //设置邮件正文
     msg.setText(builder.toString());
+    
     //设置发件人邮箱
     msg.setFrom(new InternetAddress("2625063601@qq.com"));
  
